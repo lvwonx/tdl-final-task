@@ -1,0 +1,10 @@
+import { Given, When, Then } from '@wdio/cucumber-framework';
+import searchingPage from '../page-objects/searching.page.js';
+
+When('I see confirmation about searching {string} element', async function(element) {
+    await expect(searchingPage.receivedSearchingElement).toHaveText(expect.stringContaining(element.toUpperCase()));
+});
+
+Then('I see only {string} products at searching page', async function(productKeyWord) {
+    await expect(searchingPage.receivedProductName).toHaveText(expect.stringContaining(productKeyWord));
+});
