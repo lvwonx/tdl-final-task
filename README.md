@@ -1,12 +1,5 @@
 # TestDevLab Winter School Web Automation and WebDriverIO Final Task
 
-## Install
-
-To install the dependencies run:
-```
-run
-```
-
 ## Run the tests
 
 To run the tests, run command:
@@ -39,12 +32,14 @@ Test Case 4
 Similarly, when there is 1 item in the cart, if the user removes an item from the cart, it now
 should display that there are no items anymore.
 
+## A bit of explanation
+
+I wanted to make fourth TC with .alert-warning selector and message "Your shopping cart is empty." but there was some magic ;)
+
+In the second TC (searching) were one interesting thing as well. Couldn't make products counting from productsPage. Tried a lot of features, but it doesn't work. Maybe my bad, maybe it's impossible (no)
+
 ## Log file
 
 Added a log file to git. There was one problem in fourth Test Case, done it a bit "weird", but it works. I spent a couple of hours to figure out why it doesn't work, but I didn't find any reasons.
 
-I wanted to make it with .alert-warning selector and message "Your shopping cart is empty." but there was some magic ;)
-
-##### Author: Marks Klescs
-=======
 ##### Author: Marks Klescs
