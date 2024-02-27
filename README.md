@@ -46,3 +46,5 @@ Added a log file to git. There was one problem in fourth Test Case, done it a bi
 I wanted to make it with .alert-warning selector and message "Your shopping cart is empty." but there was some magic ;)
 
 ##### Author: Marks Klescs
+=======
+##### Author: Marks Klescs
