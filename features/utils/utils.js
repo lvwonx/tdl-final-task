@@ -1,4 +1,4 @@
-import productPage from "../page-objects/product.page.js";
+import productsPage from "../page-objects/products.page.js";
 
 export function parseMenuExpression(menuExpression) {
     // Women -> Tops -> Jackets
@@ -15,4 +15,9 @@ export function randomProductPosition() {
 export function randomProductQty() {
     const productQty = Math.floor(Math.random() * (Math.floor(5) - Math.ceil(1)) + Math.ceil(1));
     return productQty;
+}
+
+export function productQtyOnPage() {
+    const productQtyOnPage = productsPage.productQtyOnPage[0];
+    return parseInt(productQtyOnPage);
 }

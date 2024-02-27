@@ -43,4 +43,6 @@ should display that there are no items anymore.
 
 Added a log file to git. There was one problem in fourth Test Case, done it a bit "weird", but it works. I spent a couple of hours to figure out why it doesn't work, but I didn't find any reasons.
 
+I wanted to make it with .alert-warning selector and message "Your shopping cart is empty." but there was some magic ;)
+
 ##### Author: Marks Klescs

@@ -10,4 +10,4 @@ Feature: Searching a product
 
     Examples: 
         | keyword   |
-        | "T-shirt" |
+        | "Dress" |
