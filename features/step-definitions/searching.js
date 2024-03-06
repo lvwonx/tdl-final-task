@@ -6,6 +6,9 @@ When('I see confirmation about searching {string} element', async function(eleme
 });
 
 Then('I see only {string} products at searching page', async function(productKeyWord) {
+    // REVIEW: Yeah, this index based approach is not good. You never know if you have 7 elements.
+    // Look into $$() function which lets you get all of the elements with a specific selector. Then you can
+    //  iterate over all found elements and check that they contain expected text.
     for(let i = 1; i <= 7; i++) {
         await expect(searchingPage.receivedProductName(i)).toHaveText(expect.stringContaining(productKeyWord));
     }
