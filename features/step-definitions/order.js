@@ -6,21 +6,29 @@ import { randomProductPosition } from '../utils/utils.js';
 import { randomProductQty } from '../utils/utils.js';
 
 When('I select one of the products', async function() {
-    const productPos = randomProductPosition();
-    await productsPage.clickOnProduct(productPos).click();
+    // const productPos = randomProductPosition();
+    // await productsPage.clickOnProduct(productPos).click();
+    await browser.debug();
 });
 
 When('I select quantity, size and color', async function() {
-    let productSize = 1;
-    while(true) {
-        productSize++;
-        await productPage.clickOnSizeDropDown.click();
-        await productPage.selectProductSize(productSize).click();
-        if(productPage.productAvailability) break;
-    }
+    // REVIEW: Thumbs up for trying to find a configuration that is available instead of blindly selecting one specific.
+    // But the be more sure about that, you should have first, filtered products by "in stock" filter.
+    // let productSize = 1;
+    // while(true) {
+    //     productSize++;
+    //     await productPage.clickOnSizeDropDown.click();
+    //     await productPage.selectProductSize(productSize).click();
+    //     if(productPage.productAvailability) break;
+    // }
 
-    await productPage.selectProductQty.setValue(randomProductQty());
-    await productPage.selectProductColor.click();
+    // REVIEW:
+    // You can't `setValue` on `option` element.
+    // You should have found `select` element and then used `selectBy` function. I showed it in the documentation in one of the workshop lectures.
+    // For example, https://webdriver.io/docs/api/element/selectByIndex, to select by index
+    // await productPage.selectProductQty.setValue(randomProductQty());
+    // await productPage.selectProductColor.click();
+    await browser.debug();
 });
 
 When('I click Add to cart button', async function() {
